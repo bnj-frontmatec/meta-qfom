@@ -15,6 +15,9 @@ SRCREV = "${AUTOREV}"
 PV = "1.0.0"
 S = "${WORKDIR}/git"
 
+PACKAGECONFIG:append:pn-qtbase = " fontconfig"
+IMAGE_INSTALL:append = " ttf-dejavu-sans ttf-dejavu-serif"
+
 inherit cmake
 inherit cmake_qt5
 inherit populate_sdk_qt5
